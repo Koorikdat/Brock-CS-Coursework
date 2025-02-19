@@ -1,0 +1,5 @@
+sceneSetups:
+- path: Assets/IASC 1P30 - Assets/BasicScene/BasicScene.unity
+  isLoaded: 1
+  isActive: 1
+  isSubScene: 0

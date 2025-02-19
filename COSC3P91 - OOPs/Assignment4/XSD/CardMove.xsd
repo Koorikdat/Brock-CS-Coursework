@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:include schemaLocation="PriorityL4.xsd"/>
+    <xs:include schemaLocation="PlayerID.xsd"/>
+    <xs:element name="CardMove">
+        <xs:complexType>
+            <xs:attribute name="priority" use="required" type="PriorityL4"/>
+            <xs:attribute name="playerID" use="required" type="PlayerID"/>
+            <xs:attribute name="steps" use="required" type="Steps"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:simpleType name="Steps">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1"/>
+            <xs:maxInclusive value="3"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

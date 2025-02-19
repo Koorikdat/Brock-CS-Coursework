@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:include schemaLocation="PriorityL3.xsd"/>
+    <xs:include schemaLocation="PlayerID.xsd"/>
+    <xs:element name="CardBack">
+        <xs:complexType>
+            <xs:attribute name="priority" use="required" type="PriorityL3"/>
+            <xs:attribute name="playerID" use="required" type="PlayerID"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

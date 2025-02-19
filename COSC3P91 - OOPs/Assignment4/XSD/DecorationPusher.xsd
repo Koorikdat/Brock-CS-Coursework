@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:include schemaLocation="Direction.xsd"/>
+    <xs:include schemaLocation="PhaseNumber.xsd"/>
+    <xs:element name="DecorationPusher">
+        <xs:complexType>
+            <xs:attribute name="direction" use="required" type="Direction"/>
+            <xs:attribute name="x" use="required" type="xs:nonNegativeInteger"/>
+            <xs:attribute name="y" use="required" type="xs:nonNegativeInteger"/>
+            <xs:attribute name="phase1" use="required" type="PhaseNumber"/>
+            <xs:attribute name="phase2" use="required" type="PhaseNumber"/>
+            <xs:attribute name="phase3" use="required" type="PhaseNumber"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

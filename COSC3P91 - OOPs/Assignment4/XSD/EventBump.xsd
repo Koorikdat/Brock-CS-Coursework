@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:include schemaLocation="Direction.xsd"/>
+    <xs:element name="EventBump">
+        <xs:complexType>
+            <xs:attribute name="playerID" use="required" type="xs:nonNegativeInteger"/>
+            <xs:attribute name="direction" use="required" type="Direction"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

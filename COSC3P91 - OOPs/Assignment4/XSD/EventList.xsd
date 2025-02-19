@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:include schemaLocation="EventBump.xsd"/>
+    <xs:include schemaLocation="EventCardEnd.xsd"/>
+    <xs:include schemaLocation="EventCardStart.xsd"/>
+    <xs:include schemaLocation="EventDestroyed.xsd"/>
+    <xs:include schemaLocation="EventEffectEnd.xsd"/>
+    <xs:include schemaLocation="EventEffectStart.xsd"/>
+    <xs:include schemaLocation="EventRevitalize.xsd"/>
+    <xs:include schemaLocation="EventRunDecorations.xsd"/>
+    <xs:include schemaLocation="EventStep.xsd"/>
+    <xs:include schemaLocation="EventTurn90.xsd"/>
+    <xs:include schemaLocation="EventTurn180.xsd"/>
+    <xs:include schemaLocation="EventVictory.xsd"/>
+    <xs:include schemaLocation="EventWait.xsd"/>
+    <xs:element name="EventList">
+        <xs:complexType>
+            <xs:choice maxOccurs="unbounded">
+                <xs:element ref="EventBump"/>
+                <xs:element ref="EventCardEnd"/>
+                <xs:element ref="EventCardStart"/>
+                <xs:element ref="EventDestroyed"/>
+                <xs:element ref="EventEffectEnd"/>
+                <xs:element ref="EventEffectStart"/>
+                <xs:element ref="EventRevitalize"/>
+                <xs:element ref="EventRunDecorations"/>
+                <xs:element ref="EventStep"/>
+                <xs:element ref="EventTurn90"/>
+                <xs:element ref="EventTurn180"/>
+                <xs:element ref="EventVictory"/>
+                <xs:element ref="EventWait"/>
+            </xs:choice>
+        </xs:complexType>
+  </xs:element>
+</xs:schema>

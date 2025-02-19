@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<Factory xSize="9" ySize="8" maxPlayers="4" numDecorations="8" numWalls="15">
+<TilePit/>
+<TileFloor/>
+<TilePit/>
+<TileFloor/>
+<TilePit/>
+<TileFloor/>
+<TilePit/>
+<TileFloor/>
+<TilePit/>
+<TileFloor/>
+<TileFloor/>
+<TileBelt direction="South"/>
+<TileFloor/>
+<TileBelt direction="North"/>
+<TileFloor/>
+<TileFloor/>
+<TileFloor/>
+<TileGear clockwise="true"/>
+<TileFloor/>
+<TileFloor/>
+<TileGear clockwise="false"/>
+<TileBelt direction="East"/>
+<TileGear clockwise="true"/>
+<TileFloor/>
+<TileFloor/>
+<TileFloor/>
+<TileFloor/>
+<TileBelt direction="West"/>
+<TileBelt direction="West"/>
+<TileBelt direction="West"/>
+<TileBelt direction="West"/>
+<TileBelt direction="West"/>
+<TileFloor/>
+<TileBelt direction="South"/>
+<TileFloor/>
+<TileBelt direction="East"/>
+<TileFloor/>
+<TileFloor/>
+<TileFloor/>
+<TilePit/>
+<TileBelt direction="North"/>
+<TileFloor/>
+<TileBelt direction="South"/>
+<TileFloor/>
+<TileBelt direction="North"/>
+<TileBelt direction="East"/>
+<TileBelt direction="South"/>
+<TileFloor/>
+<TileBelt direction="East"/>
+<TileBelt direction="North"/>
+<TileFloor/>
+<TileBelt direction="East"/>
+<TileBelt direction="East"/>
+<TileBelt direction="North"/>
+<TileFloor/>
+<TileBelt direction="South"/>
+<TileFloor/>
+<TileBelt direction="North"/>
+<TileFloor/>
+<TileFloor/>
+<TileFloor/>
+<TileFloor/>
+<TileFloor/>
+<TileFloor/>
+<TileBelt direction="East"/>
+<TileBelt direction="South"/>
+<TileBelt direction="North"/>
+<TileGoal/>
+<TileBelt direction="West"/>
+<TileFloor/>
+<TileFloor/>
+<TileFloor/>
+<DecorationCrusher x="1" y="4" phase1="2" phase2="4"/>
+<DecorationCrusher x="3" y="6" phase1="1" phase2="3"/>
+<DecorationCrusher x="5" y="3" phase1="4" phase2="5"/>
+<DecorationPusher x="4" y="4" direction="West" phase1="2" phase2="4" phase3="5"/>
+<DecorationPusher x="7" y="4" direction="West" phase1="1" phase2="3" phase3="5"/>
+<DecorationPusher x="5" y="2" direction="South" phase1="2" phase2="3" phase3="4"/>
+<DecorationPusher x="0" y="6" direction="East" phase1="1" phase2="2" phase3="5"/>
+<DecorationPusher x="7" y="7" direction="North" phase1="3" phase2="4" phase3="5"/>
+<StartConfig x="1" y="0" direction="North"/>
+<StartConfig x="3" y="0" direction="North"/>
+<StartConfig x="5" y="0" direction="North"/>
+<StartConfig x="7" y="0" direction="North"/>
+<Wall x="1" y="2" isHorizontal="true"/>
+<Wall x="5" y="2" isHorizontal="true"/>
+<Wall x="7" y="2" isHorizontal="true"/>
+<Wall x="1" y="8" isHorizontal="true"/>
+<Wall x="4" y="8" isHorizontal="true"/>
+<Wall x="7" y="8" isHorizontal="true"/>
+<Wall x="0" y="2" isHorizontal="false"/>
+<Wall x="7" y="2" isHorizontal="false"/>
+<Wall x="9" y="2" isHorizontal="false"/>
+<Wall x="5" y="4" isHorizontal="false"/>
+<Wall x="8" y="4" isHorizontal="false"/>
+<Wall x="0" y="6" isHorizontal="false"/>
+<Wall x="3" y="6" isHorizontal="false"/>
+<Wall x="7" y="6" isHorizontal="false"/>
+<Wall x="9" y="6" isHorizontal="false"/>
+</Factory>

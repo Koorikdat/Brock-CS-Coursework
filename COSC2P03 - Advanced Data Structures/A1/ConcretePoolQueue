@@ -1,0 +1,78 @@
+package everybodyintothepool;
+
+import java.util.*;
+
+public class ConcretePoolQueue<E>
+ {
+
+    String first,second,third,fourth;
+
+
+    public ConcretePoolQueue<E> () {
+
+        ArrayList<ArrayList<String>> ragged;
+        ragged=new ArrayList<>();
+        //Created the initial 2D Arraylist here
+
+            append(ragged, first);
+            append(ragged, second);
+            append(ragged, third);
+            append(ragged, fourth);
+
+
+        for (ArrayList<String> group : ragged) {
+            for (String c:group) System.out.print(" "+c);
+            System.out.println();
+        }
+
+        
+    }
+
+private void append(ArrayList<ArrayList<E>> structure, String[] word) {
+        ArrayList<String> newMember=new ArrayList<>(); //Where we'll put this 'batch' of entries
+        for (String c:word) newMember.add(c);
+        structure.add(newMember);
+    }
+    
+
+    private void hasSingle(ArrayList<ArrayList<E>> collection, int index) {
+        if (index>=collection.size()) return;
+        ArrayList<String> selection=collection.get(index);
+        if (selection.size()==1) {
+            for (String c : selection) System.out.print(c);
+            System.out.println();
+        }
+        hasSingle(collection, index+1);
+    }
+
+    private void hasPair(ArrayList<ArrayList<E>> collection, int index) {
+        if (index>=collection.size()) return;
+        ArrayList<String> selection=collection.get(index);
+        if (selection.size()==2) {
+            for (String c : selection) System.out.print(c);
+            System.out.println();
+        }
+        hasPair(collection, index+1);
+    }
+
+    private void hasTriple(ArrayList<ArrayList<E>> collection, int index) {
+        if (index>=collection.size()) return;
+        ArrayList<String> selection=collection.get(index);
+        if (selection.size()==3) {
+            for (String c : selection) System.out.print(c);
+            System.out.println();
+        }
+        hasTriple(collection, index+1);
+    }
+
+    private void hasQuartet(ArrayList<ArrayList<E>> collection, int index) {
+        if (index>=collection.size()) return;
+        ArrayList<String> selection=collection.get(index);
+        if (selection.size()==4) {
+            for (String c : selection) System.out.print(c);
+            System.out.println();
+        }
+        hasQuartet(collection, index+1);
+    }
+
+}

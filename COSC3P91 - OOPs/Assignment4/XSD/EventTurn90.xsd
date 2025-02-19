@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:include schemaLocation="PlayerID.xsd"/>
+    <xs:element name="EventTurn90">
+        <xs:complexType>
+          <xs:attribute name="playerID" use="required" type="PlayerID"/>
+          <xs:attribute name="clockwise" use="required" type="xs:boolean"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

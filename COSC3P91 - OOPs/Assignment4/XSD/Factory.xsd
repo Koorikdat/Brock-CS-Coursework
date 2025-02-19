@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:include schemaLocation="TileBelt.xsd"/>
+    <xs:include schemaLocation="TileFloor.xsd"/>
+    <xs:include schemaLocation="TileGear.xsd"/>
+    <xs:include schemaLocation="TileGoal.xsd"/>
+    <xs:include schemaLocation="TilePit.xsd"/>    
+    <xs:include schemaLocation="StartConfig.xsd"/>  
+    <xs:include schemaLocation="Wall.xsd"/>    
+    <xs:include schemaLocation="DecorationCrusher.xsd"/>
+    <xs:include schemaLocation="DecorationPusher.xsd"/>   
+    <xs:element name="Factory">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:choice minOccurs="1" maxOccurs="unbounded">
+                    <xs:element ref="TileBelt"/>
+                    <xs:element ref="TileFloor"/>
+                    <xs:element ref="TileGear"/>
+                    <xs:element ref="TileGoal"/>
+                    <xs:element ref="TilePit"/>
+                </xs:choice>
+                <xs:choice minOccurs="0" maxOccurs="unbounded">
+                    <xs:element ref="DecorationCrusher"/>
+                    <xs:element ref="DecorationPusher"/>
+                </xs:choice>
+                <xs:element minOccurs="1" maxOccurs="unbounded" ref="StartConfig"/>
+                <xs:element minOccurs="0" maxOccurs="unbounded" ref="Wall"/>
+            </xs:sequence>    
+            <xs:attribute name="xSize" use="required" type="xs:nonNegativeInteger"/>
+            <xs:attribute name="ySize" use="required" type="xs:nonNegativeInteger"/>
+            <xs:attribute name="maxPlayers" use="required" type="xs:nonNegativeInteger"/>
+            <xs:attribute name="numDecorations" use="required" type="xs:nonNegativeInteger"/>
+            <xs:attribute name="numWalls" use="required" type="xs:nonNegativeInteger"/>       
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

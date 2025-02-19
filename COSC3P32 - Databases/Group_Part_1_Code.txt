@@ -1,0 +1,135 @@
+CREATE TABLE Employee (
+    eid INTEGER PRIMARY KEY,
+    sin INTEGER,
+    FullName CHAR(50),
+    Address CHAR(50),
+    Phone CHAR(25),
+    DoB DATE,
+    Email CHAR(50),
+);
+
+CREATE TABLE Team (
+    tid INTEGER PRIMARY KEY,
+    Name CHAR(50),
+    Contact CHAR(50),
+    Phone CHAR(25),
+    Sponser CHAR(50)
+);
+
+CREATE TABLE Works_for (
+    eid INTEGER,
+    tid INTEGER,
+    since DATE,
+    PRIMARY KEY (eid,tid),
+    FOREIGN KEY (eid) REFERENCES Employee,
+    FOREIGN KEY (tid) REFERNECES Team
+);
+
+CREATE TABLE Police_Check (
+    eid INTEGER,
+    record_num CHAR(25),
+    issue_date DATE,
+    PRIMARY KEY (eid, rec),
+    FOREIGN KEY (eid) REFERENCES Employee
+);
+
+CREATE TABLE Assistant_Coach (
+    eid INTEGER PRIMARY KEY,
+    FOREIGN KEY (eid) REFERENCES Employee (eid) ON DELETE CASCADE
+);
+
+CREATE TABLE Head_Coach (
+    eid INTEGER PRIMARY KEY,
+    coaching_certification_id char(20),
+    FOREIGN KEY (eid) REFERENCES Employee (eid) ON DELETE CASCADE,
+    FOREIGN KEY (coaching_certification_id) REFERENCES Coaching_Certification(id)     
+);
+
+CREATE TABLE Coaching_Certification (
+    id char(20) PRIMARY KEY,
+    date_expires DATE,
+    date_issued DATE,
+    issuing_organization_address char(50),
+    certification_number char(20),
+    issuing_organization char(50)   
+);
+
+CREATE TABLE Trainer (
+    id char(20) PRIMARY KEY,
+    address char(50),
+    phone_number char (20),
+    dob DATE,
+    fname char(20),
+    lname char(20),
+    email char(50),
+    sin char(15),
+    certification_id char(20),
+    Foreign Key (certification_id) REFERENCES Certification_Credentials(id) 
+);
+
+CREATE TABLE Certification_Credentials (
+    id char(20) PRIMARY KEY,
+    date_expires DATE,
+    date_issued DATE,
+    issuing_organization char(50),
+    certification_number char(20),
+    location char(50),
+    level char(20)
+);
+
+CREATE TABLE Player (
+    pid INTEGER PRIMARY KEY,
+    name CHAR(50),
+    address CHAR(100),
+    phone CHAR(18),
+    birth_date DATE,
+    plays_for INTEGER,
+    initial_contact INTEGER NOT NULL,
+    FOREIGN KEY (plays_for) REFERENCES Team(tid)
+);
+
+CREATE TABLE Contact (
+    cid INTEGER PRIMARY KEY,
+    name CHAR(50),
+    phone CHAR(18),
+    contact_for INTEGER,
+    FOREIGN KEY (contact_for) REFERENCES Player(pid)
+);
+
+CREATE TABLE EmergencyContactList (
+    contact INTEGER,
+    player INTEGER,
+    PRIMARY KEY (contact, player),
+    FOREIGN KEY (contact) REFERENCES Contact(cid) ON DELETE NO ACTION,
+    FOREIGN KEY (player) REFERENCES Player(pid) ON DELETE CASCADE
+);
+
+CREATE TABLE Game (
+    gid INTEGER PRIMARY KEY,
+    visiting_team INTEGER,
+    home_team INTEGER,
+    Address CHAR (50),
+    Location_manager CHAR (50),
+    Seat_Capacity INTEGER,
+    Score CHAR (10),
+    Date DATE,
+    FOREIGN KEY (visiting_team) REFERENCES Team(tid),
+    FOREIGN KEY (home_team) REFERENCES Team(tid),
+);
+
+CREATE TABLE Goal (
+    gid INTEGER,
+    Time CHAR(8),
+    Points INTEGER(7),
+    PRIMARY KEY (gid, Time),
+    FOREIGN KEY (gid) REFERENCES Game(gid)
+);
+
+CREATE TABLE Assisted_By (
+    gid INTEGER,
+    Time CHAR(8),
+    pid INTEGER,
+    PRIMARY KEY (gid, Time, pid),
+    FOREIGN KEY (gid) REFERENCES Game(gid),
+    FOREIGN KEY (pid) REFERENCES Player(pid)
+);

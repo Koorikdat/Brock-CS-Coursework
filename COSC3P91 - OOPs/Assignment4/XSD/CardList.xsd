@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:include schemaLocation="CardBack.xsd"/>
+    <xs:include schemaLocation="CardMove.xsd"/>
+    <xs:include schemaLocation="CardTurn180.xsd"/>
+    <xs:include schemaLocation="CardTurn90.xsd"/>
+    <xs:element name="CardList">
+    <xs:complexType>
+        <xs:choice maxOccurs="unbounded">
+            <xs:element ref="CardBack"/>
+            <xs:element ref="CardMove"/>
+            <xs:element ref="CardTurn180"/>
+            <xs:element ref="CardTurn90"/>
+        </xs:choice>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
